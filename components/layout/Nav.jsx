@@ -27,7 +27,7 @@ export default function Nav() {
         <li>
           <Link
             href="/about"
-            className={pathname === "/about" ? "active" : "inactive"}
+            className={pathname.startsWith("/about") ? "active" : "inactive"}
           >
             About
           </Link>
@@ -35,7 +35,7 @@ export default function Nav() {
         <li>
           <Link
             href="/shows"
-            className={pathname === "/shows" ? "active" : "inactive"}
+            className={pathname.startsWith("/shows") ? "active" : "inactive"}
           >
             Shows
           </Link>
@@ -43,7 +43,7 @@ export default function Nav() {
         <li>
           <Link
             href="/merch"
-            className={pathname === "/merch" ? "active" : "inactive"}
+            className={pathname.startsWith("/merch") ? "active" : "inactive"}
           >
             Merch
           </Link>

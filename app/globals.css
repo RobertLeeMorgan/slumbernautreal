@@ -301,7 +301,7 @@ section {
   width: clamp(270px, 40vw, 400px);
   border-radius: 12px;
   aspect-ratio: 16/ 9;
-  margin-inline: min(1rem, 3vw);
+  margin-inline: min(1.5rem, 3vw);
   border: 0px;
   box-shadow: 4px 8px 8px hsl(0deg 0% 0% / 0.38);
 }
@@ -429,10 +429,14 @@ a:hover,
 }
 
 .loader {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+}
+
+.spinner {
+  margin-block: auto;
 }
 
 table {
@@ -512,18 +516,21 @@ tr:last-child > td {
   border-radius: 1rem;
   overflow: hidden;
   max-width: 20rem;
+  display: flex;
+  width: 100%;
   text-align: center;
   box-shadow: 4px 8px 8px hsl(0deg 0% 0% / 0.38);
 }
 
 .vinyl article {
   height: 100%;
+  width: inherit;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
-.vinyl img {
+.record {
   width: 80%;
   object-fit: cover;
   box-shadow: 6px 8px 8px hsla(0, 0%, 0%, 0.592);

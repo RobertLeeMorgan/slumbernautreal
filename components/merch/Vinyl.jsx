@@ -4,6 +4,7 @@ import { useContext } from "react";
 import { currencyFormatter } from "./util/formatting.js";
 import Button from "./UI/Button.jsx";
 import CartContext from "./store/CartContext.jsx";
+import Image from "next/image.js";
 
 export default function Vinyl({ vinyl }) {
   const cartCtx = useContext(CartContext);
@@ -15,7 +16,18 @@ export default function Vinyl({ vinyl }) {
     <li className="vinyl holder">
       <article>
         <div className="vinyl-bg">
-          <img src={vinyl.image} alt={vinyl.name} />
+          <Image
+            src={vinyl.image}
+            alt={vinyl.name}
+            className="record"
+            style={{
+              width: "80%",
+              height: "auto",
+              objectFit: "cover",
+            }}
+            width={500}
+            height={500}
+          />
         </div>
         <div>
           <h3>{vinyl.name}</h3>
