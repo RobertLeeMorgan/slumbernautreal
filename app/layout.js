@@ -1,5 +1,5 @@
 import "./globals.css";
-import Layout from "../components/layout/layout";
+import Template from "../components/layout/Template";
 
 export const metadata = {
   title: "Slumbernaut",
@@ -12,7 +12,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <Layout>{children}</Layout>
+        <Template>{children}</Template>
       </body>
     </html>
   );
