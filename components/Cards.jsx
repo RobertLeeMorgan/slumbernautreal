@@ -7,7 +7,7 @@ export default function Cards({ record }) {
         <Image
           loading="lazy"
           src={record.image}
-          alt={`${record.name} artwork`}
+          alt={`${record.title} artwork`}
           style={{
             width: 'auto',
             height: "auto",
@@ -17,7 +17,7 @@ export default function Cards({ record }) {
           height={118}
         />
         <div className="contents">
-          <h5>{record.name}</h5>
+          <h5>{record.title}</h5>
           <span className="tag">{record.tag}</span>
         </div>
       </div>
