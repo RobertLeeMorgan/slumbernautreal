@@ -28,7 +28,7 @@ export default function Contact() {
       .then(
         (result) => {
           console.log(result.text);
-          form.current.value = "";
+          form.current.reset();
         },
         (error) => {
           console.log(error.text);

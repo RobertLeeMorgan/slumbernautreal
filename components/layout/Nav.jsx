@@ -10,10 +10,18 @@ export default function Nav() {
   const nav = useRef();
 
   useEffect(() => {
-    window.addEventListener("scroll", () => {
-      const rect = nav.current.getBoundingClientRect();
+    const handleScroll = () => {
+      if (!nav.current) return;
+      const rect = nav.current.
+      getBoundingClientRect();
       setScroll(rect.top <= 0);
-    });
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
 
   return (

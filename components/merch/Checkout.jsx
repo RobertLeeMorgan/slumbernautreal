@@ -1,6 +1,6 @@
 "use client";
 
-import { useContext, useRef } from "react";
+import { useContext, useRef, useActionState } from "react";
 import CartContext from "./store/CartContext";
 import UserProgressContext from "./store/UserProgressContext";
 import { currencyFormatter } from "./util/formatting";
@@ -10,12 +10,11 @@ import Button from "./UI/Button";
 import Error from "./Error";
 import { placeOrder } from "../../lib/order";
 import FormSubmit from "./FormSubmit";
-import { useFormState } from "react-dom";
 
 export default function Checkout() {
   const cartCtx = useContext(CartContext);
   const userProgressCtx = useContext(UserProgressContext);
-  const [state, formAction] = useFormState(placeOrder, { message: null });
+  const [state, formAction] = useActionState(placeOrder, { message: null });
   const formRef = useRef();
 
   const cartTotal = cartCtx.items.reduce(
