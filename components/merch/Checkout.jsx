@@ -1,6 +1,6 @@
 "use client";
 
-import { useContext, useRef, useActionState } from "react";
+import { useContext, useRef, useActionState, useEffect } from "react";
 import CartContext from "./store/CartContext";
 import UserProgressContext from "./store/UserProgressContext";
 import { currencyFormatter } from "./util/formatting";
@@ -31,8 +31,13 @@ export default function Checkout() {
     cartCtx.clearCart();
   }
 
+  useEffect(() => {
+    if (state.message === "Order created!") {
+      formRef.current?.reset();
+    }
+  }, [state.message]);
+
   if (state.message === "Order created!") {
-    state.message = null
     return (
       <Modal
         open={userProgressCtx.progress === "checkout"}
@@ -41,8 +46,7 @@ export default function Checkout() {
         <h2>Success!</h2>
         <p>Your order was submitted successfully.</p>
         <p>
-          (This store contains
-          fake products, no order has actually been placed.)
+          (This store contains fake products; no order has actually been placed.)
         </p>
         <p className="modal-actions">
           <Button onClick={handleFinish}>Okay</Button>
@@ -68,7 +72,7 @@ export default function Checkout() {
           name="order"
           value={JSON.stringify(cartCtx.items)}
         />
-        {state.message && (
+        {state.message && state.message !== "Order created!" && (
           <Error title="Failed to submit order" message={state.message} />
         )}
         <p className="modal-actions">
