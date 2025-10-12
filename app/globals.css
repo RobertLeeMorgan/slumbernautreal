@@ -56,7 +56,7 @@ body {
 .header {
   text-align: center;
   position: relative;
-  margin-bottom: 8vh;
+  margin-bottom: 7vh;
   background-color: var(--clr-primary-900);
 }
 
@@ -64,23 +64,13 @@ body {
   background-position-x: center;
   background-size: cover;
   background-image: url("/main.png");
-  -webkit-mask-image: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    from(rgba(0, 0, 0, 1)) 85%,
-    to(rgba(0, 0, 0, 0))
-  );
-  mask-image: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 1) 85%,
-    rgba(0, 0, 0, 0)
-  );
-  height: 70vh;
+  mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 85%, rgba(0,0,0,0));
+  height: 65vh;
   @media (min-width: 600px) {
     background-position-y: center;
   }
 }
+
 
 .theme {
   color: #ffffffde;
@@ -187,7 +177,7 @@ h3 {
   margin-left: clamp(35px, 4.5vw, 75px);
   letter-spacing: 0.1rem;
   text-shadow: 2px 3px 5px rgba(0, 0, 0, 0.5);
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   font-size: 1.5rem;
 }
 
