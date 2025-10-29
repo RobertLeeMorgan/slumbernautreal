@@ -9,7 +9,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@babel/helpers": "^7.28.4",
     "@emailjs/browser": "^3.12.1",
     "next": "^15.5.4",
     "react": "^18",
@@ -18,8 +17,7 @@
     "react-loader-spinner": "^5.4.5",
     "react-switch": "^7.0.0",
     "react-toastify": "^11.0.5",
-    "typeface-space-mono": "^1.1.13",
-    "vite": "^7.1.9"
+    "typeface-space-mono": "^1.1.13"
   },
   "devDependencies": {
     "eslint": "^8",
