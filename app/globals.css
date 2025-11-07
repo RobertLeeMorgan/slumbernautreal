@@ -26,7 +26,7 @@ body {
   --clr-footer: #5b5b5b;
   --clr-footback: #0f0f13;
   --clr-accent-400: #7913a8;
-  --clr-submit: #82139880;
+  --clr-submit: #9614b0fe;
   --clr-invert: linear-gradient(135deg, #464650, #27212b);
   --clr-inset: #4f4948;
   --clr-button: #25252d;
@@ -36,18 +36,18 @@ body {
 }
 .light {
   --clr-primary-100: #0f0000de;
-  --clr-primary-900: linear-gradient(135deg, #a8acff, #a5bdfd);
+  --clr-primary-900: linear-gradient(135deg, #eaebf9, #a9bcef);
   --clr-secondary-300: #260606;
-  --clr-secondary-800: #ac00dc;
+  --clr-secondary-800: #8d44a1;
   --clr-secondary-700: #1a0000;
   --clr-newsletter: #786980;
   --clr-footer: #726677;
-  --clr-footback: #1c1320;
+  --clr-footback: #232223;
   --clr-accent-400: #6d000f;
   --clr-invert: linear-gradient(135deg, #a5bdfd, #b076da);
   --clr-inset: #aa8ee1;
-  --clr-submit: #82139880;
-  --clr-vinyl: linear-gradient(135deg, #e0cbdc, #886d84);
+  --clr-submit: #b70ada;
+  --clr-vinyl: linear-gradient(135deg, #f0eaef, #a98ca4);
   --clr-button: #d5d5f3;
   background: var(--clr-primary-900);
   color: var(--clr-primary-100);
@@ -314,7 +314,7 @@ footer {
   padding-block: 0.3rem;
   padding-inline: 1rem;
   font-family: var(--ff-secondary);
-  color: #c00dc0ce;
+  color: var(--clr-footback);
   border-radius: 0 8px 8px 0;
   font-size: 1rem;
   border: 1px var(--clr-submit) solid;
@@ -401,7 +401,7 @@ footer {
 .about > p {
   margin-inline: clamp(30px, 4vw, 60px);
   text-align: justify;
-  text-shadow: 2px 3px 5px rgba(0, 0, 0, 0.5);
+  text-shadow: 2px 3px 5px rgba(64, 64, 64, 0.5);
   @media (max-width: 400px) {
     text-align: start;
   }

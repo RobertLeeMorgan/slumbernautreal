@@ -62,7 +62,14 @@ export default function Contact() {
         </div>
       </form>
       <ToastContainer position="bottom-center" theme="dark" />
-      <h4 className="copy">&copy; Slumbernaut 2024</h4>
+      <h4 className="copy">
+        &copy;{" "}
+        {process.env.NEXT_PUBLIC_ARTIST_NAME
+          ? process.env.NEXT_PUBLIC_ARTIST_NAME.charAt(0).toUpperCase() +
+            process.env.NEXT_PUBLIC_ARTIST_NAME.slice(1)
+          : ""}{" "}
+        2024
+      </h4>
     </footer>
   );
 }

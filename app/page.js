@@ -1,5 +1,5 @@
-import Records from "../components/Records";
-import Videos from "../components/Videos";
+import Records from "../components/ui/Records";
+import Videos from "../components/ui/Videos";
 import { Suspense } from "react";
 import Loading from "./loading";
 import { getRecords } from "../lib/getRecords";
@@ -7,8 +7,8 @@ import { getVideos } from "../lib/getVideos";
 
 export default async function Home() {
   const records = await getRecords();
-  
-  const youtubeIds = await getVideos()
+
+  const youtubeIds = await getVideos();
 
   return (
     <Suspense fallback={<Loading />}>
